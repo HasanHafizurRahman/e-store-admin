@@ -23,6 +23,9 @@ export default function Home() {
   }
   return (
     <>
+      <Head>
+        <title>E-commerce Admin</title>
+      </Head>
       <main className="flex h-screen w-screen flex-col items-center justify-between p-24">
         <div className="text-center w-full">
           <p className=""> Signed in as {session.user.email}</p> <br />
