@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useSession, signIn, signOut } from "next-auth/react";
+import Nav from "@/components/Nav";
 export default function Home() {
   const { data: session } = useSession();
   if (!session) {
@@ -26,16 +27,24 @@ export default function Home() {
       <Head>
         <title>E-commerce Admin</title>
       </Head>
-      <main className="flex h-screen w-screen flex-col items-center justify-between p-24">
-        <div className="text-center w-full">
-          <p className=""> Signed in as {session.user.email}</p> <br />
-          <button
-            className="bg-white mt-4 p-2 px-4 rounded-lg font-semibold font-sans"
-            onClick={() => signOut()}
-          >
-            Sign out
-          </button>
-        </div>
+      <main className="bg-primary flex min-h-screen justify-between">
+        <Nav />
+        <section className="bg-white flex-grow mt-2 mr-2 mb-0 p-4 rounded-lg">
+          <section className="flex">
+            <div>
+              <p className=""> Signed in as {session.user.email}</p>
+            </div>
+
+            <div>
+              <button
+                className="bg-primary text-white px-4 py-2 mx-2 rounded-lg font-semibold font-sans"
+                onClick={() => signOut()}
+              >
+                Sign out
+              </button>
+            </div>
+          </section>
+        </section>
       </main>
     </>
   );
