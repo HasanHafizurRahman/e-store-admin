@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 const Nav = () => {
   const inactiveLink = "flex gap-1 p-1 mb-1";
-  const activeLink = inactiveLink + " bg-secondary text-primary rounded-l-lg";
+  const activeLink = inactiveLink + " bg-white text-primary rounded-l-lg";
 
   const router = useRouter();
   const { pathname } = router;
@@ -45,7 +45,7 @@ const Nav = () => {
         Dashboard
       </Link>
       <Link
-        className={pathname === "/products" ? activeLink : inactiveLink}
+        className={pathname.includes("/products") ? activeLink : inactiveLink}
         href={"/products"}
       >
         <svg
@@ -65,7 +65,7 @@ const Nav = () => {
         Products
       </Link>
       <Link
-        className={pathname === "/orders" ? activeLink : inactiveLink}
+        className={pathname.includes("/orders") ? activeLink : inactiveLink}
         href={"/orders"}
       >
         <svg
@@ -85,7 +85,7 @@ const Nav = () => {
         Orders
       </Link>
       <Link
-        className={pathname === "/settings" ? activeLink : inactiveLink}
+        className={pathname.includes("/settings") ? activeLink : inactiveLink}
         href={"/settings"}
       >
         <svg

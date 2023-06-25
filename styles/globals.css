@@ -2,21 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-} */
+h1 {
+  @apply text-primary text-3xl mb-2;
+}
+input,
+textarea {
+  @apply border-2 border-gray-300 rounded-md px-1 w-full;
+  @apply mb-2;
+}
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
+input:focus,
+textarea:focus {
+  @apply border-primary;
+}
 
-body {
-  /* color: rgb(var(--foreground-rgb)); */
-  /* background: #1e1e2c; */
+label {
+  @apply text-primary;
+}
+
+.btn-secondary {
+  @apply bg-secondary hover:bg-primary text-primary hover:text-white font-semibold px-3 py-2 mt-2 rounded-lg;
 }
