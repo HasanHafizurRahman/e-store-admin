@@ -1,17 +1,25 @@
 import Layout from "@/components/Layout";
 import axios from "axios";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 const NewProducts = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
+  const [gotoproduct, setGotoproduct] = useState(false);
+
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = { title, description, price };
     await axios.post("/api/products", data);
+    setGotoproduct(true);
   };
+  if (gotoproduct) {
+    router.push("/products");
+  }
   return (
     <Layout>
       <h1 className="font-semibold">New Product</h1>
