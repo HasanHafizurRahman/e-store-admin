@@ -23,3 +23,17 @@ label {
 .btn-secondary {
   @apply bg-secondary hover:bg-primary text-primary hover:text-white font-semibold px-3 py-2 mt-2 rounded-lg;
 }
+
+table.basic {
+  @apply mt-9 w-full;
+}
+table.basic a {
+  @apply bg-primary text-white py-1 px-2 rounded-md text-sm inline-flex;
+}
+table.basic thead {
+  @apply bg-secondary opacity-80 font-semibold;
+}
+
+table.basic tr td {
+  @apply border border-secondary p-1;
+}

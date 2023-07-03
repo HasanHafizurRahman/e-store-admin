@@ -18,12 +18,13 @@ const Products = () => {
       >
         Add New Product
       </Link>
-      <table>
+      <table className="basic">
         <thead>
           <tr>
             <td>Product Name</td>
             <td>Price</td>
             <td>Description</td>
+            <td></td>
           </tr>
         </thead>
         <tbody>
@@ -32,6 +33,9 @@ const Products = () => {
               <td>{product.title}</td>
               <td>{product.price}</td>
               <td>{product.description}</td>
+              <td>
+                <Link href={"/products/" + product._id}>edit</Link>
+              </td>
             </tr>
           ))}
         </tbody>
