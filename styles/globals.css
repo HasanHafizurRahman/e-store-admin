@@ -25,15 +25,15 @@ label {
 }
 
 table.basic {
-  @apply mt-9 w-full;
+  @apply mt-9 w-full text-primary;
 }
 table.basic a {
-  @apply bg-primary text-white py-1 px-2 rounded-md text-sm inline-flex;
+  @apply bg-primary text-white py-1 px-2 rounded-md text-sm inline-flex gap-1;
 }
 table.basic thead {
-  @apply bg-secondary opacity-80 font-semibold;
+  @apply bg-secondary font-semibold;
 }
 
 table.basic tr td {
-  @apply border border-secondary p-1;
+  @apply border border-primary p-1;
 }

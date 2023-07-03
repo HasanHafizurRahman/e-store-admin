@@ -7,6 +7,9 @@ export default async function handler(req, res) {
   //   mongoose.Promise = clientPromise;
   await mongooseConnect();
   if (method === "GET") {
+    if (req.query?.id) {
+      res.json(await Product.findOne({ _id: req.query.id }));
+    }
     res.json(await Product.find());
   }
   if (method === "POST") {
