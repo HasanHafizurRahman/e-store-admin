@@ -24,6 +24,7 @@ const ProductForm = ({
     } else {
       //create
       await axios.post("/api/products", data);
+      alert(`Product "${title}" created successfully`);
     }
     setGotoproduct(true);
   };

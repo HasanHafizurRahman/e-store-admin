@@ -23,6 +23,12 @@ label {
 .btn-secondary {
   @apply bg-secondary hover:bg-primary text-primary hover:text-white font-semibold px-3 py-2 mt-2 rounded-lg;
 }
+.btn-primary {
+  @apply bg-primary hover:bg-secondary text-white hover:text-primary font-semibold px-3 py-2 mt-2 rounded-lg;
+}
+.btn-red {
+  @apply bg-red-600 hover:bg-red-900 text-white font-semibold px-3 py-2 mt-2 rounded-lg;
+}
 
 table.basic {
   @apply mt-9 w-full text-primary;
