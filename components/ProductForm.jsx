@@ -21,6 +21,7 @@ const ProductForm = ({
     if (_id) {
       //update
       await axios.put("/api/products", { ...data, _id });
+      alert(`Product edited successfully`);
     } else {
       //create
       await axios.post("/api/products", data);

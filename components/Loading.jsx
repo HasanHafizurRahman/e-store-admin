@@ -1,19 +1,23 @@
 import React from "react";
-import { Bars } from "react-loader-spinner";
-const Loading = () => {
-  return (
-    <div>
-      <Bars
-        height="80"
-        width="80"
-        color="#F29F67"
-        ariaLabel="bars-loading"
-        wrapperStyle={{}}
-        wrapperClass=""
-        visible={true}
-      />
-    </div>
-  );
-};
+import ContentLoader from "react-content-loader";
+
+const Loading = (props) => (
+  <ContentLoader
+    speed={2}
+    width={800}
+    height={460}
+    viewBox="0 0 400 160"
+    backgroundColor="#f3f3f3"
+    foregroundColor="#ecebeb"
+    {...props}
+  >
+    <rect x="0" y="8" rx="3" ry="3" width="388" height="6" />
+    <rect x="0" y="26" rx="3" ry="3" width="352" height="6" />
+    <rect x="0" y="56" rx="3" ry="3" width="410" height="6" />
+    <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
+    <rect x="0" y="88" rx="3" ry="3" width="178" height="6" />
+    {/* <circle cx="20" cy="20" r="20" /> */}
+  </ContentLoader>
+);
 
 export default Loading;
